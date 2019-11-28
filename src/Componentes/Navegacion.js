@@ -1,5 +1,7 @@
 import React from "react";
 import {Navbar, NavItem, NavLink, NavbarBrand, Nav} from "reactstrap";
+import Carro from "./Carro";
+
 class Navegacion extends React.Component {
     render(){
         return(
@@ -15,6 +17,10 @@ class Navegacion extends React.Component {
                     <NavItem>
                         <NavLink href = "/">Nosotros </NavLink>
                     </NavItem>
+                    <NavItem>
+                        <Carro/>
+                    </NavItem>
+
                 </Nav>
 
             </Navbar>
