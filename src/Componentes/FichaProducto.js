@@ -38,19 +38,20 @@ class FichaProducto extends React.Component{
 
         
     }
+    contador = 2
    
-    contador(){
-         var contar = 0;
-        for( i < listaCarrito.length ){
-            contar += 1;
-        };
+    // contador(){
+        //  var contar = 0;
+        // for( i < listaCarrito.length ){
+            // contar += 1;
+        // };
             
                 
                 
             
 
         
-    }
+    // }
 
     render(){
         return(
