@@ -1,18 +1,21 @@
 import React from "react";
 import {Popover, PopoverHeader, Table, PopoverBody, Badge, Button} from "reactstrap";
-import {listaCarrito} from "../listaCarrito";
+import {listaCarrito} from '../listaCarrito';
 
 class Carro extends React.Component{
 
     constructor(props){
         super();
         this.state = {
-            popoverOpen : false.
+            popoverOpen : false,
             listaCarrito
+            
         };
         this.toggle = this.toggle.bind(this);
        
     }
+
+    suma
 
     toggle(){
         this.setState(prevState =>({
@@ -27,20 +30,24 @@ class Carro extends React.Component{
             const arregloCarrito = this.state.listaCarrito.map(
                 (listaCarrito, i) => {
                     return(
-                        <tr>
+                        <tr key = {i}>
                             <td>{(i += 1)}</td>
                             <td>{listaCarrito.titulo}</td>
-                            <td>{listaCarrito.titulo}</td>
+                            <td>{listaCarrito.precio}</td>
                         </tr>
                     );
                 }
-             )
+             );
              // fin de problemaaaaaaaaaaaaaa
             return(
                 <div>
                     <Button id = "Popover1" color = "info">
                         <span className = "material-icons">shopping_cart </span>
-                        <Badge color = "secondary">{arregloCarrito.lenght}</Badge>
+                        
+                        <Badge color = "primary">{arregloCarrito.length}</Badge>
+                        
+                        
+                        
                     
                     </Button>
                     <Popover target = "Popover1" placement = "bottom" isOpen= {this.state.popoverOpen} toggle={this.toggle}>
@@ -60,6 +67,16 @@ class Carro extends React.Component{
 
 
                                 </tbody>
+                                <tfoot>
+                                     <tr>
+                                        <th>Total:</th>
+                                        <th> </th>
+                                        <td>CLP</td>
+
+                                    </tr>
+
+                                
+                                </tfoot>
 
                             </Table>
 
