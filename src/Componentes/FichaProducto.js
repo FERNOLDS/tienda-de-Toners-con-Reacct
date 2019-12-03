@@ -11,10 +11,13 @@ class FichaProducto extends React.Component{
         super();
         this.state = {
             modal : false,
-            listaCarrito
+            listaCarrito,
+            stock : this.props.props.stock
+            
         };
         this.toggle = this.toggle.bind(this);
         this.agregarCarrito = this.agregarCarrito.bind(this);
+
     }
 
     toggle(){
@@ -24,6 +27,7 @@ class FichaProducto extends React.Component{
         }));
 
     }
+    
     
     agregarCarrito(){
         listaCarrito.push({
@@ -66,7 +70,7 @@ class FichaProducto extends React.Component{
                         <p>El detalle del producto seleccionado es el siguiente: </p>
                         {this.props.props.descripcion}
                         <p>El precio del producto es <b>{this.props.props.precio}</b> pesos.</p>
-                        <p>Hay <b>{(this.props.props.stock)- this.contador}</b> unidades de este producto.</p>
+                        <p>Hay <b>{this.stock}</b> unidades de este producto.</p>
                 
 
 
