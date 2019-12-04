@@ -43,7 +43,7 @@ class FichaProducto extends React.Component{
                 <Button onClick = {this.toggle}>Ver Ficha</Button>
                 <Modal isOpen = {this.state.modal}>
                     Este es el mejor Toner en el mundo Papá
-                    mas hielo para la piscola se llena y sube sola  
+                      
                     <ModalHeader>{this.props.props.titulo}</ModalHeader>
                     <ModalBody>
                         <CardImg src={this.props.props.imagen}/>
