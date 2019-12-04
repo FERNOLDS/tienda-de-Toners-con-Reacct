@@ -35,26 +35,7 @@ class FichaProducto extends React.Component{
 
         ))
 
-<<<<<<< HEAD
-        
     }
-    contador = 2
-   
-    // contador(){
-        //  var contar = 0;
-        // for( i < listaCarrito.length ){
-            // contar += 1;
-        // };
-            
-                
-                
-            
-
-        
-    // }
-=======
-    }
->>>>>>> parent of 916d3a1... mas cambios con el carrito
 
     render(){
         return(
