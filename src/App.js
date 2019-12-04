@@ -27,7 +27,7 @@ class App extends React.Component{
           imagen = {listaProductos.imagen}
           descripcion = {listaProductos.descripcion}
           precio = {listaProductos.precio}
-          stock = {parseInt(listaProductos.stock)}
+          stock = {listaProductos.stock}
 
           />
         )

@@ -15,8 +15,8 @@ class Carro extends React.Component{
        
     }
 
-    
-    
+    suma
+
     toggle(){
         this.setState(prevState =>({
             popoverOpen: !prevState.popoverOpen
@@ -25,41 +25,20 @@ class Carro extends React.Component{
 
     }
 
-
         render(){
-            
+            //problemas aquiiiiiiiiiiiiiiiiiii
             const arregloCarrito = this.state.listaCarrito.map(
                 (listaCarrito, i) => {
                     return(
                         <tr key = {i}>
                             <td>{(i += 1)}</td>
                             <td>{listaCarrito.titulo}</td>
-                            <td>{parseInt(listaCarrito.precio)}</td>
-                            
+                            <td>{listaCarrito.precio}</td>
                         </tr>
                     );
                 }
              );
-             
-             const sumatoria = this.state.listaCarrito.map(
-                (listaCarrito, i) => {
-                    return (
-    
-                      parseInt(listaCarrito.precio)
-                    )
-                }
-            )
-           
-            var suma = 0;
-            for(var i = 0; i < sumatoria.length; i++)
-            {
-                
-                suma += sumatoria[i];
-            }
-            
-            
-    
-            
+             // fin de problemaaaaaaaaaaaaaa
             return(
                 <div>
                     <Button id = "Popover1" color = "info">
@@ -92,7 +71,7 @@ class Carro extends React.Component{
                                      <tr>
                                         <th>Total:</th>
                                         <th> </th>
-                                        <td>{suma}  CLP</td>
+                                        <td>CLP</td>
 
                                     </tr>
 
@@ -101,7 +80,7 @@ class Carro extends React.Component{
 
                             </Table>
 
-                        </PopoverBody>
+                        </PopoverBody>x
 
                     </Popover>
 
