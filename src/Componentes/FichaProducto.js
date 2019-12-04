@@ -24,7 +24,6 @@ class FichaProducto extends React.Component{
         }));
 
     }
-    
     agregarCarrito(){
         listaCarrito.push({
             "titulo" : this.props.props.titulo,
@@ -34,8 +33,9 @@ class FichaProducto extends React.Component{
             modal : !prevState.modal
         }
 
-        ));
+        ))
 
+<<<<<<< HEAD
         
     }
     contador = 2
@@ -52,6 +52,9 @@ class FichaProducto extends React.Component{
 
         
     // }
+=======
+    }
+>>>>>>> parent of 916d3a1... mas cambios con el carrito
 
     render(){
         return(
@@ -59,14 +62,14 @@ class FichaProducto extends React.Component{
                 <Button onClick = {this.toggle}>Ver Ficha</Button>
                 <Modal isOpen = {this.state.modal}>
                     Este es el mejor Toner en el mundo Papá
-                    
+                    mas hielo para la piscola se llena y sube sola  
                     <ModalHeader>{this.props.props.titulo}</ModalHeader>
                     <ModalBody>
                         <CardImg src={this.props.props.imagen}/>
                         <p>El detalle del producto seleccionado es el siguiente: </p>
                         {this.props.props.descripcion}
                         <p>El precio del producto es <b>{this.props.props.precio}</b> pesos.</p>
-                        <p>Hay <b>{(this.props.props.stock)- this.contador}</b> unidades de este producto.</p>
+                        <p>Hay <b>{this.props.props.stock}</b> unidades de este producto.</p>
                 
 
 
