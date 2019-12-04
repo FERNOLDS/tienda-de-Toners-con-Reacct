@@ -16,7 +16,20 @@ class App extends React.Component{
     };
   }
   render(){
-    
+    // inicio de problemas
+    const arregloCarrito = this.state.listaCarrito.map(
+      (listaCarrito, i) => {
+        return(
+          <tr>
+            <td>{(i += 1)}</td>
+            <td>{listaCarrito.titulo}</td>
+            <td>{listaCarrito.precio}</td>
+          </tr>
+        );
+      }
+    )
+
+       // fin de problema
     const arregloComponentes = this.state.listaProductos.map(
       (listaProductos, i) => {
         

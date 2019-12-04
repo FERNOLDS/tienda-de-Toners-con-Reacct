@@ -2,7 +2,7 @@ import React from "react";
 
 import {Modal, ModalHeader, ModalFooter, ModalBody, Container, Button, CardImg } from "reactstrap";
 import "./FichaProducto.css";
-import {listaCarrito} from '../listaCarrito.json';
+import {listaCarrito} from "../listaCarrito.json";
 
 
 
@@ -14,7 +14,7 @@ class FichaProducto extends React.Component{
             listaCarrito
         };
         this.toggle = this.toggle.bind(this);
-        this.agregarCarrito = this.agregarCarrito.bind(this);
+       this.agregarCarrito = this.agregarCarrito.bind(this);
     }
 
     toggle(){
@@ -58,7 +58,7 @@ class FichaProducto extends React.Component{
                     <ModalFooter className = "modalfooter">
                         <Button color = "primary" onClick={this.toggle}>Quiero Comprarlo</Button>
                         <Button color = "secondary" onClick={this.toggle}>Volver atras</Button>
-                        <Button color = "primary" onClick={this.agregarCarrito}>Agregar al carrito</Button>
+                        <Button color = "secondary" onClick={this.agregarCarrito}>Agregar al carrito</Button>
 
 
 
