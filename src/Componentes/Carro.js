@@ -7,18 +7,13 @@ class Carro extends React.Component{
     constructor(props){
         super();
         this.state = {
-            popoverOpen : false.
+            popoverOpen : false,
             listaCarrito
         };
         this.toggle = this.toggle.bind(this);
        
     }
 
-<<<<<<< HEAD
-=======
-    suma
-
->>>>>>> parent of 916d3a1... mas cambios con el carrito
     toggle(){
         this.setState(prevState =>({
             popoverOpen: !prevState.popoverOpen
@@ -35,25 +30,35 @@ class Carro extends React.Component{
                         <tr>
                             <td>{(i += 1)}</td>
                             <td>{listaCarrito.titulo}</td>
-<<<<<<< HEAD
-                            <td>{listaCarrito.titulo}</td>
-                        </tr>
-                    );
-                }
-             )
-=======
                             <td>{listaCarrito.precio}</td>
                         </tr>
                     );
                 }
              );
->>>>>>> parent of 916d3a1... mas cambios con el carrito
              // fin de problemaaaaaaaaaaaaaa
+
+             const sumatoria = this.state.listaCarrito.map(
+                (listaCarrito, i) => {
+                    return (
+    
+                      parseInt(listaCarrito.precio)
+                    )
+                }
+            )
+           
+            var suma = 0;
+            for(var i = 0; i < sumatoria.length; i++)
+            {
+                
+                suma += sumatoria[i];
+            }
+            
+            
             return(
                 <div>
                     <Button id = "Popover1" color = "info">
                         <span className = "material-icons">shopping_cart </span>
-                        <Badge color = "secondary">{arregloCarrito.lenght}</Badge>
+                        <Badge color = "secondary">{arregloCarrito.length}</Badge>
                     
                     </Button>
                     <Popover target = "Popover1" placement = "bottom" isOpen= {this.state.popoverOpen} toggle={this.toggle}>
@@ -73,23 +78,20 @@ class Carro extends React.Component{
 
 
                                 </tbody>
-<<<<<<< HEAD
-=======
                                 <tfoot>
                                      <tr>
                                         <th>Total:</th>
                                         <th> </th>
-                                        <td>CLP</td>
+                                        <td>{suma} CLP</td>
 
                                     </tr>
 
                                 
                                 </tfoot>
->>>>>>> parent of 916d3a1... mas cambios con el carrito
 
                             </Table>
 
-                        </PopoverBody>x
+                        </PopoverBody>
 
                     </Popover>
 

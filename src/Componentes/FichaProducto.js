@@ -56,9 +56,9 @@ class FichaProducto extends React.Component{
 
                     </ModalBody>
                     <ModalFooter className = "modalfooter">
-                        <Button color = "primary" onClick={this.toggle}>Quiero Comprarlo</Button>
+                        <Button color = "primary" onClick={this.toggle}>Mas información</Button>
                         <Button color = "secondary" onClick={this.toggle}>Volver atras</Button>
-                        <Button color = "secondary" onClick={this.agregarCarrito}>Agregar al carrito</Button>
+                        <Button color = "success" onClick={this.agregarCarrito}>Agregar al carrito</Button>
 
 
 
