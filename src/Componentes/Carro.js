@@ -14,6 +14,11 @@ class Carro extends React.Component{
        
     }
 
+<<<<<<< HEAD
+=======
+    suma
+
+>>>>>>> parent of 916d3a1... mas cambios con el carrito
     toggle(){
         this.setState(prevState =>({
             popoverOpen: !prevState.popoverOpen
@@ -30,11 +35,19 @@ class Carro extends React.Component{
                         <tr>
                             <td>{(i += 1)}</td>
                             <td>{listaCarrito.titulo}</td>
+<<<<<<< HEAD
                             <td>{listaCarrito.titulo}</td>
                         </tr>
                     );
                 }
              )
+=======
+                            <td>{listaCarrito.precio}</td>
+                        </tr>
+                    );
+                }
+             );
+>>>>>>> parent of 916d3a1... mas cambios con el carrito
              // fin de problemaaaaaaaaaaaaaa
             return(
                 <div>
@@ -60,6 +73,19 @@ class Carro extends React.Component{
 
 
                                 </tbody>
+<<<<<<< HEAD
+=======
+                                <tfoot>
+                                     <tr>
+                                        <th>Total:</th>
+                                        <th> </th>
+                                        <td>CLP</td>
+
+                                    </tr>
+
+                                
+                                </tfoot>
+>>>>>>> parent of 916d3a1... mas cambios con el carrito
 
                             </Table>
 
