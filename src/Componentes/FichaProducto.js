@@ -14,7 +14,7 @@ class FichaProducto extends React.Component{
             modal : false,
             listaCarrito,
             
-            stock:this.props.props.stock
+            // stock:this.props.props.stock
            
         };
         this.toggle = this.toggle.bind(this);
@@ -28,9 +28,9 @@ class FichaProducto extends React.Component{
 
     toggle(){
         this.setState(prevState =>({
-            modal: !prevState.modal
+            modal: !prevState.modal,
            
-            // azul:this.props.props.stock,
+            stock:this.props.props.stock
             // pan:this.state.azul,
             // verde:this.state.papas
             // stocks:valor
@@ -65,7 +65,7 @@ class FichaProducto extends React.Component{
             // stock:this.props.props.stock 
             // papas:cebolla
         }
-        )
+        ));
     }
    
 
