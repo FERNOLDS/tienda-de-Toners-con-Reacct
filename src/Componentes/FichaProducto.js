@@ -19,7 +19,8 @@ class FichaProducto extends React.Component{
 
     toggle(){
         this.setState(prevState =>({
-            modal: !prevState.modal
+            modal: !prevState.modal,
+            stock:this.props.props.stock
 
         }));
 
@@ -50,7 +51,7 @@ class FichaProducto extends React.Component{
                         <p>El detalle del producto seleccionado es el siguiente: </p>
                         {this.props.props.descripcion}
                         <p>El precio del producto es <b>{this.props.props.precio}</b> pesos.</p>
-                        <p>Hay <b>{this.props.props.stock}</b> unidades de este producto.</p>
+                        <p>Hay <b>{this.state.stock}</b> unidades de este producto.</p>
                 
 
 
