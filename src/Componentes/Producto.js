@@ -5,8 +5,8 @@ import FichaProducto from "./FichaProducto";
 class Producto extends React.Component{
     render(){
         return (
-        <Col sm="4">
-            <Card className = "Card" body outline color = "primary">
+        <Col md="6">
+            <Card className = "Card" body outline color = "primary" >
                 <CardImg src = {this.props.imagen}/>
                 <CardBody>
                     <CardTitle>

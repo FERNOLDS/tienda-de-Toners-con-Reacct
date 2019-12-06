@@ -3,6 +3,7 @@ import React from "react";
 import {Modal, ModalHeader, ModalFooter, ModalBody, Container, Button, CardImg } from "reactstrap";
 import "./FichaProducto.css";
 import {listaCarrito} from "../listaCarrito.json";
+import {listaProductos} from "../listaProductos.json";
 
 
 
@@ -11,34 +12,69 @@ class FichaProducto extends React.Component{
         super();
         this.state = {
             modal : false,
-            listaCarrito
+            listaCarrito,
+            
+            stock:this.props.props.stock
+           
         };
         this.toggle = this.toggle.bind(this);
        this.agregarCarrito = this.agregarCarrito.bind(this);
-    }
+    } 
+    // cuentas(){
+    //     this.setState(prevState =>({
+    //         stock:this.props.props.stock
+    //     }));
+    // }
 
     toggle(){
         this.setState(prevState =>({
+<<<<<<< Updated upstream
             modal: !prevState.modal,
             stock:this.props.props.stock
+=======
+            modal: !prevState.modal
+           
+            // azul:this.props.props.stock,
+            // pan:this.state.azul,
+            // verde:this.state.papas
+            // stocks:valor
+>>>>>>> Stashed changes
 
         }));
-
+        // 
+        // this.setState({
+        //     stock:this.props.props.stock
+        // })
+        //    
     }
-    agregarCarrito(){
+ 
+    agregarCarrito(){ 
+
+        // var cebolla = this.state.pan - 1
+        const stock = this.state.listaProductos.map(
+        (listaProductos) => {
+            return(
+                stock= this.state.stock -1
+            );
+        }
+     );
         listaCarrito.push({
             "titulo" : this.props.props.titulo,
             "precio" : this.props.props.precio
-        });
+        });        
+        // let valor = listaProductos.stock-=1;
         this.setState(prevState => ({
-            modal : !prevState.modal
+            modal : !prevState.modal,
+            // stocks:valor         
+            // stock:this.props.props.stock 
+            // papas:cebolla
         }
-
         ))
-
     }
+   
 
     render(){
+        
         return(
             <Container>
                 <Button onClick = {this.toggle}>Ver Ficha</Button>
@@ -57,7 +93,7 @@ class FichaProducto extends React.Component{
 
                     </ModalBody>
                     <ModalFooter className = "modalfooter">
-                        <Button color = "primary" onClick={this.toggle}>Mas información</Button>
+                        
                         <Button color = "secondary" onClick={this.toggle}>Volver atras</Button>
                         <Button color = "success" onClick={this.agregarCarrito}>Agregar al carrito</Button>
 
