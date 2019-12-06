@@ -3,7 +3,7 @@ import React from "react";
 import {Modal, ModalHeader, ModalFooter, ModalBody, Container, Button, CardImg } from "reactstrap";
 import "./FichaProducto.css";
 import {listaCarrito} from "../listaCarrito.json";
-import {listaProductos} from "../listaProductos.json";
+import {listaProductos} from "../listaProductos.json"; //los importe por que crei que me servirian
 
 
 
@@ -28,17 +28,12 @@ class FichaProducto extends React.Component{
 
     toggle(){
         this.setState(prevState =>({
-<<<<<<< Updated upstream
-            modal: !prevState.modal,
-            stock:this.props.props.stock
-=======
             modal: !prevState.modal
            
             // azul:this.props.props.stock,
             // pan:this.state.azul,
             // verde:this.state.papas
             // stocks:valor
->>>>>>> Stashed changes
 
         }));
         // 
@@ -51,25 +46,26 @@ class FichaProducto extends React.Component{
     agregarCarrito(){ 
 
         // var cebolla = this.state.pan - 1
-        const stock = this.state.listaProductos.map(
-        (listaProductos) => {
-            return(
-                stock= this.state.stock -1
-            );
-        }
-     );
+        // AQUI EMPIEZA LO QUE ME PIDIERON
+    //     const stock = this.state.listaProductos.map(
+    //     (listaProductos) => {
+    //         return(
+    //             stock= this.state.stock -1
+    //         );
+    //     }
+    //  );
         listaCarrito.push({
             "titulo" : this.props.props.titulo,
             "precio" : this.props.props.precio
         });        
         // let valor = listaProductos.stock-=1;
         this.setState(prevState => ({
-            modal : !prevState.modal,
+            modal : !prevState.modal
             // stocks:valor         
             // stock:this.props.props.stock 
             // papas:cebolla
         }
-        ))
+        )
     }
    
 
